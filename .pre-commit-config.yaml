@@ -1,6 +1,9 @@
 repos:
--   repo: https://github.com/SAP/credential-digger
-    rev: main
+-   repo: https://github.com/sirwart/ripsecrets
+    rev: v0.1.7  # Use latest tag on GitHub
     hooks:
-    -   id: credential-digger-hook
-        args: [hook, --rules=rules.yml, --sqlite=my_hook_db.db]
+    -   id: ripsecrets
+        # uncomment to check additional patterns 
+        # args:
+        # - --additional-pattern 'mytoken*'
+        # - --additional-pattern 'mykey*'
